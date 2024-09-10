@@ -15,4 +15,5 @@
 - typeScript
 
 ### etc
-- Lucid Icon
+- Lucid Icon (아이콘 적용)
+- svgr/webpack (svg 적용)
