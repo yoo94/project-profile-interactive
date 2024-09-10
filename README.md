@@ -13,7 +13,9 @@
 ### skill
 - nextJs 14 (app router)
 - typeScript
-
+- react
+  
 ### etc
 - Lucid Icon (아이콘 적용)
 - svgr/webpack (svg 적용)
+- Framer Motion (인터렉티브 모션 적용)
