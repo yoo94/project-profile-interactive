@@ -1,69 +1,76 @@
+import MainIntro from "./components/main-intro";
+
 export default function Home() {
   return (
     <>
-      <h1>home</h1>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
-      <div>adfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasfadfafafasfasf</div>
+      <MainIntro />
+      <div className="justify-center items-center">
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
+        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
+
+      </div>
     </>
   );
 }
