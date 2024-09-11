@@ -1,11 +1,39 @@
-'use client'
-import React, { useState } from "react";
+'use client';
+import React, { useEffect, useState } from "react";
 import { HeartPulse, SquareMenu } from "lucide-react";
-import { motion, useAnimationControls } from "framer-motion"
+import { motion, useAnimationControls } from "framer-motion";
+import Link from 'next/link';
+import Backdrop from './backdrop';
+import FloatingNavigate from './floating-navigate';
 
-const Header = () => {
+const Header: React.FC = () => {
+  const menuControl = useAnimationControls();
+  const backdropControl = useAnimationControls();
+  const floatingNavigateControl = useAnimationControls();
+
+  const openMenuAnimation = () => {
+    menuControl.start({ opacity: 1, height: "auto" });
+    backdropControl.start({ backdropFilter: "blur(8px)", height: "100%" });
+  };
+  const closeMenuAnimation = () => {
+    menuControl.start({ opacity: 0, height: 0 });
+    backdropControl.start({ backdropFilter: "none", height: 0 });
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      scrollTop > 150 ? floatingNavigateControl.start({ y: 0 }) : floatingNavigateControl.start({ y: "-100px" });
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const SubMenuNames = ["Carrer", "Group", "Personal", "Skill"];
   const [menuIdx, setMenuIdx] = useState(0);
+
   const renderSubMenu = () => {
     switch (menuIdx) {
       case 0:
@@ -17,7 +45,7 @@ const Header = () => {
                 <li>1</li>
                 <li>2</li>
                 <li>3</li>
-                <li>3</li>
+                <li>4</li>
               </ul>
             </div>
           </motion.div>
@@ -65,13 +93,7 @@ const Header = () => {
         return <div className="text-2xl">coming soon</div>;
     }
   };
-  const menuControl = useAnimationControls();
-  const openMenuAnimation = () => {
-    menuControl.start({ opacity: 1, height: "auto" });
-  }
-  const closeMenuAnimation = () => {
-    menuControl.start({ opacity: 0, height: 0 });
-  }
+
   return (
     <div className="flex justify-between items-center bg-black text-white px-1.5">
       <div className="flex items-center pl-5">
@@ -83,17 +105,20 @@ const Header = () => {
             <ul className="flex items-center text-xs justify-center gap-20">
               {SubMenuNames.map((item, index) => (
                 <li key={index}>
-                  <a
+                  <Link
+                    href="#"
                     key={index}
                     className="hidden min-[835px]:flex text-[#ceccce] hover:text-white font-bold p-3 pr-5 cursor-pointer text-base"
                     onMouseEnter={() => {
                       setMenuIdx(index);
-                      openMenuAnimation()
+                      openMenuAnimation();
                     }}
-                    onMouseLeave={() => { closeMenuAnimation() }}
+                    onMouseLeave={() => {
+                      closeMenuAnimation();
+                    }}
                   >
                     {item}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -102,8 +127,7 @@ const Header = () => {
             </div>
           </div>
         </nav>
-        <motion.div className="bg-[#111112] absolute w-full overflow-hidden left-0 z-10 top-16
-        "
+        <motion.div className="bg-[#111112] absolute w-full overflow-hidden left-0 z-10 top-16"
           initial={{ opacity: 0, height: 0 }}
           animate={menuControl}
           transition={{ duration: 0.4, delayChildren: 0.5 }}
@@ -111,10 +135,11 @@ const Header = () => {
           <div>{renderSubMenu()}</div>
         </motion.div>
       </div>
-
       <div className="flex items-center min-[835px]:hidden cursor-pointer p-3 pr-20">
         <SquareMenu />
       </div>
+      <Backdrop backdropControl={backdropControl} />
+      <FloatingNavigate floatingNavigateControl={floatingNavigateControl} />
     </div>
   );
 };
