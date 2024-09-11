@@ -1,4 +1,4 @@
-import MainIntro from "./components/main-intro";
+import MainIntro from "./components/main-career";
 
 export default function Home() {
   return (
