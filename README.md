@@ -20,3 +20,4 @@
 - svgr/webpack (svg 적용)
 - Framer Motion (인터렉티브 모션 적용)
 - swiper (슬라이드 모션)
+- matter.js (2D 물리엔진)
