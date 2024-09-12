@@ -12,7 +12,7 @@ const MainUnipost = () => {
   const Control2 = useAnimationControls();
   useEffect(() => {
     const onScrollChange = (yProgress: number) => {
-      if(!videoRef.current) return;
+      if (!videoRef.current) return;
       if (yProgress < 0.2) {
         Control.start({ opacity: 0, y: 20 })
       } else if (yProgress < 0.3) {
