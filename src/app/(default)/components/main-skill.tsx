@@ -26,8 +26,8 @@ const MainSkill = () => {
             "/assets/image/skillImage/webpack.png"
         ];
         const canvas = canvasRef.current;
-        const cw = 5000;
-        const ch = 5000;
+        const cw = 3000;
+        const ch = 3000;
 
         let engine: Engine, render: Render, runner: Runner, mouse: Mouse, mouseConstraint;
 
@@ -86,17 +86,30 @@ const MainSkill = () => {
         }
 
         function initImageBoxes() {
-            imageList.forEach((imgSrc) => {
-                addRect(cw / 2, ch / 2, 250, 250, {
+            const scale = 0.7; // 이미지 크기 비율
+            const t1 = { w: 250 * scale, h: 250 * scale };
+            const radius = 400; // 원형으로 배치할 반지름 값을 더 크게 설정
+            
+            // 이미지들을 원형으로 배치
+            imageList.forEach((imgSrc, index) => {
+                const angle = (Math.PI * 2 * index) / imageList.length; // 각도를 계산
+                const x = cw / 2 + Math.cos(angle) * radius; // x 좌표를 원형으로 계산
+                const y = ch / 2 + Math.sin(angle) * radius; // y 좌표를 원형으로 계산
+        
+                // 이미지를 차례대로 추가
+                addRect(x, y, t1.w, t1.h, {
+                    chamfer: { radius: 20 }, // 이미지 모서리 둥글게
                     render: {
                         sprite: {
                             texture: imgSrc,
+                            xScale: scale,
+                            yScale: scale
                         }
                     }
                 });
-                
             });
         }
+        
         
     }, []);
   return (
