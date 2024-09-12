@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import '@/app/globals.css';
 import React from 'react';
-import Header from '@/app/(default)/components/header';
+import Header from '@/app/(default)/components/(layout)/header';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';

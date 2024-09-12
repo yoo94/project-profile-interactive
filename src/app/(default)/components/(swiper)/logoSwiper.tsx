@@ -79,7 +79,7 @@ const LogoSwiper = () => {
   }, [scrollYProgress]);
 
   return (
-    <div ref={swiperContainerRef}>
+    <div ref={swiperContainerRef} className='mt-6'>
       <Swiper
         modules={[Navigation, Autoplay]} // Autoplay 모듈 추가
         navigation={{

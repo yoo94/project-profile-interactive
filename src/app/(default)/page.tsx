@@ -1,4 +1,5 @@
 import MainCareer from "./components/main-career";
+import MainSkill from "./components/main-skill";
 // import MainPersonal from "./components/main-personal";
 import MainTitle from "./components/main-title";
 import MainUnipost from "./components/main-unipost";
@@ -9,6 +10,7 @@ export default function Home() {
       <MainTitle />
       <MainUnipost />
       <MainCareer />
+      <MainSkill/>
       {/* <MainPersonal /> */}
     </>
   );

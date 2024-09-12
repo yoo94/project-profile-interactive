@@ -2,7 +2,7 @@
 import { motion, useAnimationControls, useScroll } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import Link from 'next/link'
-import LogoSwiper from './logoSwipoer';
+import LogoSwiper from './(swiper)/logoSwiper';
 const MainCareer = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const { scrollYProgress } = useScroll({
@@ -15,7 +15,7 @@ const MainCareer = () => {
   useEffect(() => {
     const onScrollChange = (yProgress: number) => {
       console.log("yProgress", yProgress);
-      if (yProgress < 0.54) {
+      if (yProgress < 0.5) {
         Control.start({ opacity: 0, y: 20 });
         Control2.start({ opacity: 0, y: 20 });
       } else {
@@ -49,7 +49,7 @@ const MainCareer = () => {
         </div>
       </div>
       <div className="flex w-full">
-        <div className="bg-black w-full mr-auto">
+        <div className="bg-[#171717] w-full mr-auto">
           <LogoSwiper />
         </div>
       </div>
