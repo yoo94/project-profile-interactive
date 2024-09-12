@@ -1,7 +1,9 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import Image from 'next/image'; // next/image 사용 시 import 추가 필요
 import { Navigation, Autoplay } from 'swiper/modules';
 import { ArrowBigRight, ArrowBigLeft } from 'lucide-react';
+import { useEffect, useRef } from 'react';
+import { useScroll } from 'framer-motion';
 
 const LogoSwiper = () => {
   const images = [
@@ -53,49 +55,76 @@ const LogoSwiper = () => {
       ism: true
     },
   ];
+  // SwiperClass 타입으로 swiperRef 정의
+  const swiperRef = useRef<SwiperClass | null>(null);
+  const swiperContainerRef = useRef<HTMLDivElement | null>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: swiperContainerRef,
+    offset: ["start end", "end start"],
+  });
+
+  useEffect(() => {
+    const handleScroll = (yProgress: number) => {
+      if (!swiperRef.current) return;
+      if (yProgress > 0.7) {
+        swiperRef.current.autoplay.start();
+      } else {
+        swiperRef.current.autoplay.stop();
+      }
+    };
+
+    const unsubscribe = scrollYProgress.on('change', handleScroll);
+    return () => unsubscribe(); // cleanup
+  }, [scrollYProgress]);
 
   return (
-    <Swiper
-      modules={[Navigation, Autoplay]}
-      navigation={{
-        nextEl: '.custom-next-button',
-        prevEl: '.custom-prev-button',
-      }}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
-    >
-      {images.map((image, index) => (
-        <SwiperSlide key={index}>
-          <div className="flex w-full">
-            <div className="w-1/3">
-              <Image
-                className='ml-72'
-                src={`/assets/image/${image.src}.jpg`}
-                alt={image.title}
-                width={1300}
-                height={400}
-                style={{ width: '70%', height: 'auto', borderRadius: '70%' }}
-              />
+    <div ref={swiperContainerRef}>
+      <Swiper
+        modules={[Navigation, Autoplay]} // Autoplay 모듈 추가
+        navigation={{
+          nextEl: '.custom-next-button',
+          prevEl: '.custom-prev-button',
+        }}
+        autoplay={{
+          delay: 1200,
+          disableOnInteraction: false,
+        }}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
+      >
+        {images.map((image, index) => (
+          <SwiperSlide key={index}>
+            <div className="flex w-full">
+              <div className="w-1/3">
+                <Image
+                  className='ml-72'
+                  src={`/assets/image/${image.src}.jpg`}
+                  alt={image.title}
+                  width={1300}
+                  height={400}
+                  style={{ width: '70%', height: 'auto', borderRadius: '70%' }}
+                />
+              </div>
+              <div className="w-2/3 p-4">
+                <h2 className="text-xl font-semibold">{image.title}</h2>
+                <h4>period : {image.period}</h4>
+                <p className="text-sm text-red-500">web front Skill: html, css, js, jquery, requireJs, mustache</p>
+                {image.ism && (
+                  <p className="text-sm text-red-500">mobile Skill: react-native, react, typeScript, redux, webpack</p>
+                )}
+                <p className="text-sm text-blue-500">back Skill: java,spring</p>
+                <h5 className='mt-6'>구현</h5>
+                <p className="text-sm">{image.description}</p>
+              </div>
             </div>
-            <div className="w-2/3 p-4">
-              <h2 className="text-xl font-semibold">{image.title}</h2>
-              <h4>period : {image.period}</h4>
-              <p className="text-sm text-red-500">web front Skill: html, css, js, jquery, requireJs, mustache</p>
-              {image.ism && (
-                <p className="text-sm text-red-500">mobile Skill: react-native, react, typeScript, redux, webpack</p>
-              )}
-              <p className="text-sm text-blue-500">back Skill: java,spring</p>
-              <h5 className='mt-6'>구현</h5>
-              <p className="text-sm">{image.description}</p>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
-      <button className="custom-prev-button"><ArrowBigLeft /></button>
-      <button className="custom-next-button"><ArrowBigRight /></button>
-    </Swiper>
+          </SwiperSlide>
+        ))}
+        <button className="custom-prev-button"><ArrowBigLeft /></button>
+        <button className="custom-next-button"><ArrowBigRight /></button>
+      </Swiper>
+    </div>
   );
 };
 
