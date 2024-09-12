@@ -1,6 +1,5 @@
 'use client'
 import { motion, useAnimationControls, useScroll } from 'framer-motion';
-import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 const MainUnipost = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -9,18 +8,15 @@ const MainUnipost = () => {
     offset: ["start end", "end start"]
   })
   const Control = useAnimationControls();
-  const Control2 = useAnimationControls();
   useEffect(() => {
     const onScrollChange = (yProgress: number) => {
       if (!videoRef.current) return;
-      if (yProgress < 0.2) {
+      if (yProgress < 0.1) {
         Control.start({ opacity: 0, y: 20 })
-      } else if (yProgress < 0.3) {
+      } else if (yProgress < 0.25) {
         Control.start({ opacity: 1, y: 0 })
-        Control2.start({ opacity: 0, y: 20 })
-      } else if (yProgress < 0.4) {
+      } else if (yProgress < 0.5) {
         videoRef.current.play();
-        Control2.start({ opacity: 1, y: 0 })
       }
     }
     const unsubScriveY = scrollYProgress.on("change", onScrollChange)
@@ -36,10 +32,12 @@ const MainUnipost = () => {
           animate={Control}
           transition={{ duration: 1 }}
         >
-          <h1 className='mb-2 md:mb-4 md:top-1 md:text-4xl text-[#0077ed]  w-full text-center tracking-tighter'>UNIPOST</h1>
-          <div className='max-w-xl mx-auto'>
-            unipost에서 솔루션 개발자로 어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고
-            어쩌고저쩌고어쩌고저쩌고
+          <h1 className='mb-2 md:mb-4 md:top-1 md:text-4xl text-[#0077ed]  w-full text-center tracking-tighter'> UNIPOST corp.</h1>
+          <div className='max-w-xl mx-auto text-left mb-10'>
+            <p className='mb-3'>- 경비지출관리 모바일과 PC로 실시간 회사의 모든 영수증 처리</p>
+            <p className='mb-3'>- 법인카드 , 카드사 스크래핑, 개인카트, 현금영수증, 매입세금계산서, 지출결의서</p>
+            <p className='mb-3'>- 결재기능 제공 및 다양한 결재 양식, 프로세스 커스터마이징</p>
+            <p className='mb-3'>- sap erp 연동</p>
           </div>
         </motion.div>
         <div className='w-full relative'>
@@ -51,22 +49,6 @@ const MainUnipost = () => {
             <source src="/assets/video/unipost-web.webm" type='video/mp4' />
           </video>
         </div>
-        <motion.div className='font-light'
-          initial={{ opacity: 0, y: 20 }}
-          animate={Control}
-          transition={{ duration: 1 }}
-        >
-          <motion.button className='mt-3 bg-[#0071e3] hover:bg-[#0077ed] py-2.5 w-24 text-center rounded-full'
-            initial={{ opacity: 0, y: 20 }}
-            animate={Control2}
-            transition={{ duration: 1 }}
-          >
-            <Link href="#" className='underline text-sm relative flex items-center justify-center cursor-pointer bg-[#0071e3] hover:bg-[#0077ed] text-center rounded-full'>
-              View project
-            </Link>
-          </motion.button>
-        </motion.div>
-
       </div>
 
     </section>

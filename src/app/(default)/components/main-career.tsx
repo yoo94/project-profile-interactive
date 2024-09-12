@@ -15,14 +15,11 @@ const MainCareer = () => {
   useEffect(() => {
     const onScrollChange = (yProgress: number) => {
       console.log("yProgress", yProgress);
-      if (yProgress < 0.47) {
+      if (yProgress < 0.54) {
         Control.start({ opacity: 0, y: 20 });
-      } else if (yProgress < 0.5) {
-        Control.start({ opacity: 1, y: 0 });
         Control2.start({ opacity: 0, y: 20 });
-      } else if (yProgress < 0.55) {
-        Control2.start({ opacity: 1, y: 0 });
       } else {
+        Control.start({ opacity: 1, y: 0 });
         Control2.start({ opacity: 1, y: 0 });
       }
     }
@@ -38,7 +35,7 @@ const MainCareer = () => {
             animate={Control}
             transition={{ duration: 1 }}
           >
-            진행업체.
+            투입 project
           </motion.h1>
           <motion.div className="md:text-xl font-semibold text-[#0071e3] cursor-pointer hover:underline"
             initial={{ opacity: 0, y: 20 }}
@@ -46,7 +43,7 @@ const MainCareer = () => {
             transition={{ duration: 1 }}
           >
             <Link href="https://yoo94.github.io/about/#/" target='_blank'>
-              개발자에 대해서..
+              about devlp
             </Link>
           </motion.div>
         </div>
