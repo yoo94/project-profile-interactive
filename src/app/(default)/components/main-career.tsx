@@ -1,6 +1,8 @@
 'use client'
 import { motion, useAnimationControls, useScroll } from 'framer-motion';
 import { useEffect, useRef } from 'react';
+import Link from 'next/link'
+import LogoSwiper from './logoSwipoer';
 const MainCareer = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const { scrollYProgress } = useScroll({
@@ -9,7 +11,6 @@ const MainCareer = () => {
   })
   const Control = useAnimationControls();
   const Control2 = useAnimationControls();
-  const Control3 = useAnimationControls();
 
   useEffect(() => {
     const onScrollChange = (yProgress: number) => {
@@ -21,10 +22,8 @@ const MainCareer = () => {
         Control2.start({ opacity: 0, y: 20 });
       } else if (yProgress < 0.55) {
         Control2.start({ opacity: 1, y: 0 });
-        Control3.start({ opacity: 0, y: 20 });
       } else {
         Control2.start({ opacity: 1, y: 0 });
-        Control3.start({ opacity: 1, y: 0 });
       }
     }
     const unsubScriveY = scrollYProgress.on("change", onScrollChange)
@@ -39,25 +38,24 @@ const MainCareer = () => {
             animate={Control}
             transition={{ duration: 1 }}
           >
-            일단 핵심부터.
+            진행업체.
           </motion.h1>
           <motion.div className="md:text-xl font-semibold text-[#0071e3] cursor-pointer hover:underline"
             initial={{ opacity: 0, y: 20 }}
             animate={Control2}
             transition={{ duration: 1 }}
           >
-            동영상 보기
-          </motion.div>
-          <motion.div className="md:text-xl font-semibold text-[#0071e3] cursor-pointer hover:underline"
-            initial={{ opacity: 0, y: 20 }}
-            animate={Control3}
-            transition={{ duration: 1 }}
-          >
-            이벤트 신청하기
+            <Link href="https://yoo94.github.io/about/#/" target='_blank'>
+              개발자에 대해서..
+            </Link>
           </motion.div>
         </div>
       </div>
-      <div className="h-p bg-red-400">Carousel section</div>
+      <div className="flex w-full">
+        <div className="bg-black w-full mr-auto">
+          <LogoSwiper />
+        </div>
+      </div>
     </section>
 
   )

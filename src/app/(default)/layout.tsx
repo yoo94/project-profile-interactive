@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import '@/app/globals.css';
 import React from 'react';
 import Header from '@/app/(default)/components/header';
-
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 export const metadata: Metadata = {
   title: 'project', // title을 항상 문자열로 보장
   description: '',
