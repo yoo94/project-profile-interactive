@@ -12,11 +12,14 @@ const MainUnipost = () => {
     const onScrollChange = (yProgress: number) => {
       if (!videoRef.current) return;
       if (yProgress < 0.1) {
+        videoRef.current.pause();
         Control.start({ opacity: 0, y: 20 })
       } else if (yProgress < 0.25) {
         Control.start({ opacity: 1, y: 0 })
       } else if (yProgress < 0.5) {
         videoRef.current.play();
+      } else if (yProgress > 0.6) {
+        videoRef.current.pause();
       }
     }
     const unsubScriveY = scrollYProgress.on("change", onScrollChange)
