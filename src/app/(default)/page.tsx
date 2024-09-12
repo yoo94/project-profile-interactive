@@ -1,76 +1,15 @@
-import MainIntro from "./components/main-career";
+import MainCareer from "./components/main-career";
+import MainPersonal from "./components/main-personal";
+import MainTitle from "./components/main-title";
+import MainUnipost from "./components/main-unipost";
 
 export default function Home() {
   return (
     <>
-      <MainIntro />
-      <div className="justify-center items-center">
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfas
-        sdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsfsdfasdfasdfadsf
-
-      </div>
+      <MainTitle />
+      <MainUnipost />
+      <MainCareer />
+      <MainPersonal />
     </>
   );
 }

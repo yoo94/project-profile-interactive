@@ -12,12 +12,14 @@ const MainUnipost = () => {
   const Control2 = useAnimationControls();
   useEffect(() => {
     const onScrollChange = (yProgress: number) => {
+      if(!videoRef.current) return;
       if (yProgress < 0.2) {
         Control.start({ opacity: 0, y: 20 })
       } else if (yProgress < 0.3) {
         Control.start({ opacity: 1, y: 0 })
         Control2.start({ opacity: 0, y: 20 })
       } else if (yProgress < 0.4) {
+        videoRef.current.play();
         Control2.start({ opacity: 1, y: 0 })
       }
     }
@@ -41,11 +43,11 @@ const MainUnipost = () => {
           </div>
         </motion.div>
         <div className='w-full relative'>
-          <video ref={videoRef} autoPlay muted loop src="/assets/video/unipost-web.mp4" className='flex md:hidden w-[376px]'>
+          <video ref={videoRef} muted loop src="/assets/video/unipost-web.mp4" className='flex md:hidden w-[376px]'>
             <source src="/assets/video/unipost-web.webm" type='video/mp4' />
             브라우저에서 해당 video tag를 지원하지 않습니다.
           </video>
-          <video ref={videoRef} autoPlay muted loop src="/assets/video/unipost-web.mp4" className='hidden md:flex w-full' >
+          <video ref={videoRef} muted loop src="/assets/video/unipost-web.mp4" className='hidden md:flex w-full' >
             <source src="/assets/video/unipost-web.webm" type='video/mp4' />
           </video>
         </div>
