@@ -12,12 +12,12 @@ const MainUnipost = () => {
   const Control2 = useAnimationControls();
   useEffect(() => {
     const onScrollChange = (yProgress: number) => {
-      console.log(yProgress)
       if (yProgress < 0.2) {
         Control.start({ opacity: 0, y: 20 })
-        Control2.start({ opacity: 0, y: 20 })
-      } else {
+      } else if (yProgress < 0.3) {
         Control.start({ opacity: 1, y: 0 })
+        Control2.start({ opacity: 0, y: 20 })
+      } else if (yProgress < 0.4) {
         Control2.start({ opacity: 1, y: 0 })
       }
     }
@@ -51,14 +51,18 @@ const MainUnipost = () => {
         </div>
         <motion.div className='font-light'
           initial={{ opacity: 0, y: 20 }}
-          animate={Control2}
+          animate={Control}
           transition={{ duration: 1 }}
         >
-          <button className='mt-3 bg-[#0071e3] hover:bg-[#0077ed] py-2.5 w-24 text-center rounded-full '>
+          <motion.button className='mt-3 bg-[#0071e3] hover:bg-[#0077ed] py-2.5 w-24 text-center rounded-full'
+            initial={{ opacity: 0, y: 20 }}
+            animate={Control2}
+            transition={{ duration: 1 }}
+          >
             <Link href="#" className='underline text-sm relative flex items-center justify-center cursor-pointer bg-[#0071e3] hover:bg-[#0077ed] text-center rounded-full'>
               View project
             </Link>
-          </button>
+          </motion.button>
         </motion.div>
 
       </div>

@@ -4,14 +4,6 @@ import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 const MainPersonal = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  // const Control = useAnimationControls();
-  // const Control2 = useAnimationControls();
-  // useEffect(() => {
-  //   if (!videoRef.current) return;
-  //   videoRef.current.play();
-  //   Control.start({ opacity: 1 })
-  //   Control2.start({ opacity: 1, y: 0 })
-  // })
   const { scrollYProgress } = useScroll({
     target: videoRef,
     offset: ["start end", "end start"]
@@ -22,11 +14,12 @@ const MainPersonal = () => {
   useEffect(() => {
     const onScrollChange = (yProgress: number) => {
       console.log(yProgress)
-      if (yProgress < 0.14) {
+      if (yProgress < 0.2) {
         Control.start({ opacity: 0, y: 20 })
-        Control2.start({ opacity: 0, y: 20 })
-      } else {
+      } else if (yProgress < 0.3) {
         Control.start({ opacity: 1, y: 0 })
+        Control2.start({ opacity: 0, y: 20 })
+      } else if (yProgress < 0.4) {
         Control2.start({ opacity: 1, y: 0 })
       }
     }
