@@ -15,21 +15,76 @@ interface Data {
     [key: string]: SkillData;  // This line allows indexing with any string but assumes all keys are of type SkillData
 }
 const data: Data = {
-    JS: { title: 'Javascript', level: 5, desc: '자바스크립트에 대한 설명이라고 할 수 있습니다. 자바스크립트 ...' },
-    REACT: { title: 'React.js', level: 3, desc: 'React에 대한 설명이라고 할 수 있습니다. React에 대한 ...' },
-    CSS: { title: 'CSS', level: 3, desc: 'CSS에 대한 설명이라고 할 수 있습니다. CSS에 대한 설명...' },
-    HTML: { title: 'HTML', level: 5, desc: 'HTML에 대한 설명이라고 할 수 있습니다. HTML에 대한 설명...' },
-    git: { title: 'GIT', level: 4, desc: 'HTML에 대한 설명이라고 할 수 있습니다. HTML에 대한 설명...' },
-    java: { title: 'JAVA', level: 3, desc: 'HTML에 대한 설명이라고 할 수 있습니다. HTML에 대한 설명...' },
-    jquery: { title: 'HTML', level: 4, desc: 'HTML에 대한 설명이라고 할 수 있습니다. HTML에 대한 설명...' },
-    linux: { title: 'LINUX', level: 3, desc: 'HTML에 대한 설명이라고 할 수 있습니다. HTML에 대한 설명...' },
-    next: { title: 'NEXT.js', level: 4, desc: 'HTML에 대한 설명이라고 할 수 있습니다. HTML에 대한 설명...' },
-    node: { title: 'NODE.js', level: 3, desc: 'HTML에 대한 설명이라고 할 수 있습니다. HTML에 대한 설명...' },
-    redux: { title: 'REDUX', level: 2, desc: 'HTML에 대한 설명이라고 할 수 있습니다. HTML에 대한 설명...' },
-    tomcat: { title: 'TOMCAT', level: 4, desc: 'HTML에 대한 설명이라고 할 수 있습니다. HTML에 대한 설명...' },
-    typescript: { title: 'TypeScript', level: 3, desc: 'HTML에 대한 설명이라고 할 수 있습니다. HTML에 대한 설명...' },
-    webpack: { title: 'webpack', level: 3, desc: 'HTML에 대한 설명이라고 할 수 있습니다. HTML에 대한 설명...' },
-    apache: { title: 'Apache', level: 3, desc: 'HTML에 대한 설명이라고 할 수 있습니다. HTML에 대한 설명...' },
+    JS: {
+        title: 'Javascript',
+        level: 5,
+        desc: 'js엔진에 대한 동작 원리와를 이해하고 있습니다. ES6문법을 이해하고 비동기 처리, 프로미스, 클로저 등을 활용 할 수 있습니다.'
+    },
+    REACT: {
+        title: 'React.js',
+        level: 3,
+        desc: '상태 관리와 생명주기 메서드에 대해 기본적인 이해하고  있고, 함수형 컴포넌트와 커스텀 hook를 사용하여 프로젝트를 진행할 수 있습니다.'
+    },
+    CSS: {
+        title: 'CSS',
+        level: 3,
+        desc: 'tailwind, styled component, 미디어 쿼리를 통해 반응형 디자인을 구현할 수 있습니다. 특정 라이브러리를 이용하여 인터랙티브 ui 구현 경험이 있습니다.'
+    },
+    HTML: {
+        title: 'HTML',
+        level: 5,
+        desc: '기본 퍼블리싱과 개인 프로젝트에서 SEO 최적화 경험이 있습니다.'
+    },
+    git: {
+        title: 'GIT',
+        level: 4,
+        desc: ' 브랜치 전략을 이해하고 협업 도구로서의 GitFlow와 같은 워크플로우를 사용하여 프로젝트 관리가 가능하며, 다양한 리베이스 및 머지 상황을 해결할 수 있습니다.'
+    },
+    java: {
+        title: 'JAVA',
+        level: 3,
+        desc: 'spring 프레임워크를 사용하여 기본적인 클래스 설계와 상속, 인터페이스 등을 활용한 애플리케이션 개발 경험이 있으며, API를 만들어 타 서비스와 연동한 경험이 있습니다.'
+    },
+    linux: {
+        title: 'LINUX',
+        level: 3,
+        desc: '기본적인 커맨드 사용과 파일 시스템 관리, 패키지 설치 및 셸 스크립트 작성이 가능하며, 서버 운영 및 관리에 필요한 기초적인 명령어에 익숙합니다.'
+    },
+    next: {
+        title: 'NEXT.js',
+        level: 4,
+        desc: '앱 라우트 사용경험이 있으며,서버 사이드 렌더링,정적 웹 페이지 생성에 대한 이해가 있으며 그룹프로젝트에서 사용하여 배포까지의 경험이 있습니다. https://www.innerbooks.shop/'
+    },
+    node: {
+        title: 'NODE.js',
+        level: 3,
+        desc: 'Express 프레임워크를 사용하여 기본적인 서버구축이 가능합니다.'
+    },
+    redux: {
+        title: 'REDUX',
+        level: 2,
+        desc: '기본적인 스토어 설정과 리듀서, 액션, 미들웨어를 활용할 수 있으며, React와 연동하여 상태 관리를 할 수 있는 기본적인 수준의 이해가 있습니다.'
+    },
+    tomcat: {
+        title: 'TOMCAT',
+        level: 4,
+        desc: '웹 애플리케이션의 배포 및 관리를 경험하였으며, 설정 파일(tomcat-users.xml, server.xml, 클러스터링 설정)을 수정하여 애플리케이션 설정을 조정할 수 있습니다.'
+    },
+    typescript: {
+        title: 'TypeScript',
+        level: 3,
+        desc: '타입 시스템을 활용하여 정적 타입을 정의하고, 인터페이스와 제네릭을 사용하여 코드의 안정성과 유지보수성을 높일 수 있습니다.'
+    },
+    webpack: {
+        title: 'webpack',
+        level: 3,
+        desc: '기본적인 설정 파일 작성과 로더 및 플러그인을 사용하여 프로젝트의 빌드 과정을 최적화할 수 있습니다. 기본적인 번들링 작업과 코드 스플리팅 경험이 있습니다.'
+    },
+    apache: {
+        title: 'Apache',
+        level: 3,
+        desc: 'Apache HTTP Server는 웹 서버로, 기본적인 설정 파일을 수정하여 서버를 운영할 수 있으며, 가상 호스트 설정과(vhost, worker) SSL 인증서 설치에 대한 경험이 있습니다.'
+    }
 };
 const imageList = [
     { src: "/assets/image/skillImage/css.png", label: 'CSS' },
