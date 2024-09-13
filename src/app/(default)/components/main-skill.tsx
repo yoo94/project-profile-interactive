@@ -113,8 +113,6 @@ const MainSkill = () => {
         const cw = 2700;
         const ch = 2700;
 
-        const gravityPower = 0.5;
-        let gravityDeg = 0;
         let engine: Engine, render: Render, runner: Runner, mouse: Mouse, mouseConstraint: MouseConstraint;
 
         initScreen();
@@ -122,19 +120,7 @@ const MainSkill = () => {
         initGround();
         initImageBoxes();
 
-        Events.on(mouseConstraint, 'mousedown', () => {
-            if (mouseConstraint.body) {
-                const newSelected = data[mouseConstraint.body.label];
-                if (newSelected) {
-                    setSelected(newSelected); // 선택된 객체의 데이터를 설정
-                }
-            }
-        });
-        Events.on(runner, 'tick', () => {
-            gravityDeg += 1
-            engine.world.gravity = - gravityPower * Math.cos(Math.PI / 180 * gravityDeg)
-            engine.world.gravity = - gravityPower * Math.sin(Math.PI / 180 * gravityDeg)
-        })
+
         function initScreen() {
             engine = Engine.create();
 
@@ -161,6 +147,14 @@ const MainSkill = () => {
                 mouse: mouse
             });
             Composite.add(engine.world, mouseConstraint);
+            Events.on(mouseConstraint, 'mousedown', () => {
+                if (mouseConstraint.body) {
+                    const newSelected = data[mouseConstraint.body.label];
+                    if (newSelected) {
+                        setSelected(newSelected); // 선택된 객체의 데이터를 설정
+                    }
+                }
+            });
         }
         function initCircularBoundary() {
             const radius = 300; // 원형 경계의 반지름
