@@ -107,6 +107,37 @@ const MainSkill = () => {
             });
             Composite.add(engine.world, mouseConstraint);
         }
+        function initCircularBoundary() {
+            const radius = 300; // 원형 경계의 반지름
+            const boundaryThickness = 50; // 경계 벽의 두께
+
+            // 원형 경계를 만들기 위한 다각형으로 구성된 벽을 추가
+            const segments = 60; // 원형 경계를 이루는 다각형의 변 개수
+            const angleStep = (2 * Math.PI) / segments;
+
+            for (let i = 0; i < segments; i++) {
+                const angle = i * angleStep;
+                const x = cw / 2 + Math.cos(angle) * (radius + boundaryThickness / 2);
+                const y = ch / 2 + Math.sin(angle) * (radius + boundaryThickness / 2);
+
+                // 각 벽은 경계의 일부로, 두께가 있는 직사각형으로 구성됨
+                const boundarySegment = Bodies.rectangle(
+                    x,
+                    y,
+                    boundaryThickness, // 벽의 두께
+                    boundaryThickness, // 벽의 길이 (작게 설정)
+                    {
+                        isStatic: true,
+                        angle: angle, // 벽을 회전하여 원형으로 배치
+                        render: {
+                            visible: false // 경계를 보이지 않게 처리
+                        }
+                    }
+                );
+
+                Composite.add(engine.world, boundarySegment);
+            }
+        }
 
         function initGround() {
             const segments = 32;
@@ -122,6 +153,7 @@ const MainSkill = () => {
 
                 addRect(x, y, width, height, { isStatic: true, angle: theta });
             }
+            initCircularBoundary();
         }
 
         function addRect(x: number, y: number, w: number, h: number, option = {}) {
