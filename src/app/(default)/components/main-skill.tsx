@@ -83,7 +83,12 @@ const data: Data = {
     apache: {
         title: 'Apache',
         level: 3,
-        desc: 'Apache HTTP Server는 웹 서버로, 기본적인 설정 파일을 수정하여 서버를 운영할 수 있으며, 가상 호스트 설정과(vhost, worker) SSL 인증서 설치에 대한 경험이 있습니다.'
+        desc: '기본적인 설정 파일을 수정하여 서버를 운영할 수 있으며, 가상 호스트 설정과(vhost, worker) SSL 인증서 설치에 대한 경험이 있습니다.'
+    },
+    jquery: {
+        title: 'jquery',
+        level: 3,
+        desc: '비동기 처리, 메서드 체이닝 등 제이쿼리에서 제공하는 다양한 메서드를 사용하여 개발한 경험이 있습니다.'
     }
 };
 const imageList = [
@@ -92,7 +97,7 @@ const imageList = [
     { src: "/assets/image/skillImage/html.png", label: 'HTML' },
     { src: "/assets/image/skillImage/java.png", label: 'java' },
     { src: "/assets/image/skillImage/jquery.png", label: 'jquery' },
-    { src: "/assets/image/skillImage/js.png", label: 'js' },
+    { src: "/assets/image/skillImage/js.png", label: 'Javascript' },
     { src: "/assets/image/skillImage/linux.png", label: 'linux' },
     { src: "/assets/image/skillImage/next.png", label: 'next' },
     { src: "/assets/image/skillImage/node.png", label: 'node' },
