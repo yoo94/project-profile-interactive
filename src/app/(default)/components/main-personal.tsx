@@ -13,7 +13,6 @@ const MainPersonal = () => {
 
   useEffect(() => {
     const onScrollChange = (yProgress: number) => {
-      console.log(yProgress)
       if (yProgress < 0.2) {
         Control.start({ opacity: 0, y: 20 })
       } else if (yProgress < 0.3) {

@@ -14,7 +14,6 @@ const MainCareer = () => {
 
   useEffect(() => {
     const onScrollChange = (yProgress: number) => {
-      console.log("yProgress", yProgress);
       if (yProgress < 0.5) {
         Control.start({ opacity: 0, y: 20 });
         Control2.start({ opacity: 0, y: 20 });
