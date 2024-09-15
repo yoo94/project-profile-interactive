@@ -180,17 +180,16 @@ const MainSkill = () => {
                 if (mouseConstraint.body) {
                     const newSelected = data[mouseConstraint.body.label];
                     if (newSelected) {
-                        setSelected(newSelected); // 선택된 객체의 데이터를 설정
+                        setSelected(newSelected); 
                     }
                 }
             });
         }
         function initCircularBoundary() {
-            const boundaryRadius = 450; // 원형 경계의 반지름
-            const boundaryThickness = 50; // 경계 벽의 두께
+            const boundaryRadius = 450; 
+            const boundaryThickness = 50; 
         
-            // 원형 경계를 만들기 위한 다각형으로 구성된 벽을 추가
-            const segments = 60; // 원형 경계를 이루는 다각형의 변 개수
+            const segments = 60; 
             const angleStep = (2 * Math.PI) / segments;
         
             for (let i = 0; i < segments; i++) {
@@ -198,7 +197,6 @@ const MainSkill = () => {
                 const x = cw / 2 + Math.cos(angle) * (boundaryRadius + boundaryThickness / 2);
                 const y = ch / 2 + Math.sin(angle) * (boundaryRadius + boundaryThickness / 2);
         
-                // 각 벽은 경계의 일부로, 두께가 있는 직사각형으로 구성됨
                 const boundarySegment = Bodies.rectangle(
                     x,
                     y,
@@ -272,7 +270,7 @@ const MainSkill = () => {
                     const polygon = Bodies.polygon(x, y, sides, radius, {
                         label: imgSrc.label,
                         restitution: 0.8, // 반발력 설정
-                        friction: 0.05,   // 마찰력 설정
+                        friction: 0.04,   // 마찰력 설정
                         render: {
                             sprite: {
                                 texture: imgSrc.src,
