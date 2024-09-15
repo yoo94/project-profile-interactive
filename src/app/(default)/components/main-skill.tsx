@@ -269,8 +269,8 @@ const MainSkill = () => {
                     const sides = 6; // 다각형의 변 개수
                     const polygon = Bodies.polygon(x, y, sides, radius, {
                         label: imgSrc.label,
-                        restitution: 0.8, // 반발력 설정
-                        friction: 0.04,   // 마찰력 설정
+                        restitution: 0.5, // 반발력 설정
+                        friction: 0.03,   // 마찰력 설정
                         render: {
                             sprite: {
                                 texture: imgSrc.src,
